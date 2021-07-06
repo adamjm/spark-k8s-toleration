@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+spec:
+  tolerations:
+  - effect: NoSchedule
+    key: gpu
+    operator: Equal
+    value: platinum
+  nodeSelector:
+    beta.kubernetes.io/arch: ppc64le
